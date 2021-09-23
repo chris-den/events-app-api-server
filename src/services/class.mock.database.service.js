@@ -4,16 +4,16 @@ class MockDatabaseService {
     constructor() {
         this.addEvent({
             id: 1,
-            title: 'an event',
-            description: 'something really cool',
-            location:  'Somewhere',
+            title: 'Birthday Party',
+            description: 'celebrating birthday of our colleague',
+            location:  'Bangalore',
             eventDate: '01/01/2021'
         }).then(r => {});
         this.addEvent({
             id: 2,
-            title: 'another event',
-            description: 'something even cooler',
-            location:  'Somewhere Else',
+            title: 'Farewell',
+            description: 'farewell party for team mates',
+            location:  'Bangalore',
             eventDate: '02/01/2021'
         }).then(r => {});
     }
