@@ -17,8 +17,8 @@ describe('Test Database methods', () => {
 
     it('should add an event and return only the new event', (done) => {
         const event ={
-            title: 'New Test event',
-            description: 'Test Event Description'
+            title: 'Birthday Party',
+            description: 'celebrating birthday of our colleague'
         };
         const response = db.addEvent(event, false).then(data => {
             data.should.be.a('object');
