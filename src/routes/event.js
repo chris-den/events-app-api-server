@@ -49,4 +49,16 @@ router.delete('/:id', async (req, res) => {
     res.json(events);
 });
 
+router.put('/:id/like', async (req, res) => {
+    const returnAll = !req.query.self;
+    const events = await db.incLikes(req.params.id, returnAll);
+    res.json(events);
+});
+
+router.put('/:id/dislike', async (req, res) => {
+    const returnAll = !req.query.self;
+    const events = await db.incDisLikes(req.params.id, returnAll);
+    res.json(events);
+});
+
 module.exports = router;
