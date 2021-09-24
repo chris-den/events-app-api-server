@@ -13,7 +13,7 @@ describe('Test Database methods', () => {
         eventsLength = countObj.count;
     })
 
-    console.log('#1: eventsLength: ', eventsLength);
+   // console.log('#1: eventsLength: ', eventsLength);
 
     it('should add an event and return only the new event', (done) => {
         const event ={
@@ -22,7 +22,7 @@ describe('Test Database methods', () => {
         };
         const response = db.addEvent(event, false).then(data => {
             data.should.be.a('object');
-            data.event.title.should.eql('New Test event');
+            data.event.title.should.eql('Birthday Party');
             eventId = data.event.id;
             done();
         }).catch(err => {
